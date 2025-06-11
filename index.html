@@ -7,7 +7,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div id="game">
+  <!-- Tela Inicial -->
+  <div id="start-screen">
+    <h1>Super Plataforma</h1>
+    <button id="start-btn">Jogar</button>
+  </div>
+
+  <!-- Jogo -->
+  <div id="game" style="display: none;">
     <div id="player"></div>
     <div class="ground" style="left: 0px;"></div>
     <div class="ground" style="left: 200px;"></div>
@@ -16,6 +23,74 @@
     <div class="platform" style="left: 500px; top: 250px;"></div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const startScreen = document.getElementById('start-screen');
+    const startBtn = document.getElementById('start-btn');
+    const gameArea = document.getElementById('game');
+
+    let positionX = 50, positionY = 0, velocityY = 0;
+    let isJumping = false, isLeft = false, isRight = false;
+
+    const player = document.getElementById('player');
+
+    startBtn.addEventListener('click', () => {
+      startScreen.style.display = 'none';
+      gameArea.style.display = 'block';
+      requestAnimationFrame(gameLoop);
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') isLeft = true;
+      if (e.key === 'ArrowRight') isRight = true;
+      if ((e.key === ' ' || e.key === 'ArrowUp') && !isJumping) {
+        velocityY = -12;
+        isJumping = true;
+      }
+    });
+
+    document.addEventListener('keyup', e => {
+      if (e.key === 'ArrowLeft') isLeft = false;
+      if (e.key === 'ArrowRight') isRight = false;
+    });
+
+    function gameLoop() {
+      if (isLeft) positionX -= 4;
+      if (isRight) positionX += 4;
+      velocityY += 0.5;
+      positionY += velocityY;
+
+      const grounds = document.querySelectorAll('.ground, .platform');
+      let onGround = false;
+
+      grounds.forEach(ground => {
+        const rect = ground.getBoundingClientRect();
+        const playerRect = player.getBoundingClientRect();
+        const groundTop = rect.top - document.getElementById('game').getBoundingClientRect().top;
+
+        if (
+          playerRect.bottom <= rect.top &&
+          playerRect.bottom + velocityY >= rect.top &&
+          playerRect.right > rect.left &&
+          playerRect.left < rect.right
+        ) {
+          positionY = groundTop - player.offsetHeight;
+          velocityY = 0;
+          isJumping = false;
+          onGround = true;
+        }
+      });
+
+      if (!onGround && positionY > window.innerHeight) {
+        positionX = 50;
+        positionY = 0;
+        velocityY = 0;
+      }
+
+      player.style.left = positionX + 'px';
+      player.style.top = positionY + 'px';
+
+      requestAnimationFrame(gameLoop);
+    }
+  </script>
 </body>
 </html>
