@@ -2,45 +2,29 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <title>Ultimate Plataforma - Multi-temas & Mecânicas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <title>Blox Platform's</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Tela inicial -->
-  <div id="startScreen" class="overlayScreen">
-    <h1>Ultimate Plataforma</h1>
-    <p>Explore temas, mecânicas e fases únicas!</p>
-    <button id="startBtn">Começar</button>
+  <div id="startScreen" class="screen">
+    <h1>Blox Platform's</h1>
+    <button id="startButton">Jogar</button>
   </div>
 
-  <!-- Tela de game over -->
-  <div id="gameOverScreen" class="overlayScreen" style="display:none;">
-    <h1>Fim de Jogo</h1>
-    <p id="finalScoreText"></p>
-    <button id="restartBtn">Recomeçar</button>
-  </div>
+  <canvas id="gameCanvas" width="960" height="540"></canvas>
 
-  <!-- Canvas do jogo -->
-  <canvas id="gameCanvas" width="900" height="540"></canvas>
-
-  <!-- HUD -->
   <div id="hud">
-    <div id="levelDisplay">Fase: 1</div>
-    <div id="scoreDisplay">Pontos: 0</div>
-    <div id="livesDisplay">Vidas: 1</div>
-    <div id="powerupDisplay">Power-ups: Nenhum</div>
-    <div id="mechanicsDisplay">Mecânica: Normal</div>
+    <span id="score">Score: 0</span> |
+    <span id="lives">Vidas: 1</span>
   </div>
 
-  <!-- Controles móveis -->
-  <div id="controls">
-    <button class="control-btn" id="leftBtn">◀</button>
-    <button class="control-btn" id="rightBtn">▶</button>
+  <div id="mobileControls">
+    <button id="left">◀</button>
+    <button id="right">▶</button>
+    <button id="jump">▲</button>
   </div>
-  <button class="control-btn" id="jumpBtn">▲</button>
-  <button class="control-btn" id="fireBtn" style="display:none;">🔥</button>
 
   <script src="game.js"></script>
 </body>
