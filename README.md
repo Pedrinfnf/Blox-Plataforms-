@@ -1,48 +1,25 @@
-# Blox Platform's - Jogo HTML5 Completo
+# Blox Platform's
 
-![Game Preview](./screenshot.png) <!-- Coloque uma screenshot do jogo aqui -->
+Jogo de plataforma 2D em HTML5, funcional em desktop e mobile.
 
----
+## Como jogar
 
-## Descrição
+- **PC**: setas ← → para andar, seta ↑ para pular.
+- **Mobile**: toque nos botões ◀ ▶ para andar, ▲ para pular.
 
-**Blox Platform's** é um jogo de plataforma 2D criado em HTML5, CSS e JavaScript, pensado para rodar em desktop e mobile. O jogo possui múltiplas fases, temas, power-ups, inimigos, chefes, mecânicas inovadoras e controles otimizados para toque em telas móveis.
+## Como usar
 
-O objetivo é oferecer uma experiência rica e variada, combinando exploração, desafios e diversão, com uma estrutura modular para fácil expansão e aprendizado.
-
----
-
-## Funcionalidades
-
-- Controles para teclado e botões virtuais para mobile (botões posicionados estrategicamente).
-- Várias fases com temas diferentes (ex: Cidade Submersa, Planeta Vivo, Sonhos Fragmentados).
-- Power-ups variados: vidas extras, poder de fogo, velocidade, salto aumentado.
-- Inimigos e chefes para enfrentar.
-- Sistema de pontuação e vidas.
-- HUD com informações de fase, pontos, vidas, power-ups ativos e mecânicas.
-- Mecânicas inovadoras e dinâmicas (ex: gravidade variável, transformação elemental, etc).
-- Design responsivo para funcionar em diferentes resoluções e dispositivos.
-- Código modular e comentado para facilitar aprendizado e customização.
+1. Baixe o ZIP, extraia os arquivos.
+2. Abra `index.html` no navegador.
+3. Clique em “Jogar” e divirta-se.
+4. Se quiser, envie para seu repositório e ative GitHub Pages (branch `main`, root).
 
 ---
 
-## Como Jogar
+### ➕ Pronto para expandir!
 
-- **PC**: Use as teclas direcionais (`←`, `→`) para se mover, tecla `↑` ou barra de espaço para pular, e tecla `F` para atirar (quando power-up estiver ativo).
-- **Mobile**: Use os botões virtuais na tela:
-  - Botões `◀` e `▶` no canto inferior esquerdo para se mover.
-  - Botão `▲` no canto inferior direito para pular.
-  - Botão de fogo `🔥` aparece no canto inferior direito quando disponível.
+A base está pronta pra você adicionar fases, inimigos, power-ups e muito mais.
 
 ---
 
-## Tecnologias Usadas
-
-- HTML5 Canvas para renderização gráfica.
-- JavaScript ES6 para lógica do jogo.
-- CSS para layout e estilos.
-- Tudo rodando diretamente no navegador, sem dependências externas.
-
----
-
-## Estrutura dos Arquivos# Blox-Plataforms-
+**Agora é com você**: cole os arquivos, suba no GitHub e me avisa se abrir certinho no navegador — e se quiser mais recursos, to aqui pra ajudar! 🚀
