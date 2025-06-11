@@ -2,30 +2,20 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
-  <title>Blox Platform's</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Super Plataforma</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <div id="startScreen" class="screen">
-    <h1>Blox Platform's</h1>
-    <button id="startButton">Jogar</button>
+  <div id="game">
+    <div id="player"></div>
+    <div class="ground" style="left: 0px;"></div>
+    <div class="ground" style="left: 200px;"></div>
+    <div class="ground" style="left: 400px;"></div>
+    <div class="platform" style="left: 300px; top: 300px;"></div>
+    <div class="platform" style="left: 500px; top: 250px;"></div>
   </div>
 
-  <canvas id="gameCanvas" width="960" height="540"></canvas>
-
-  <div id="hud">
-    <span id="score">Score: 0</span> |
-    <span id="lives">Vidas: 1</span>
-  </div>
-
-  <div id="mobileControls">
-    <button id="left">◀</button>
-    <button id="right">▶</button>
-    <button id="jump">▲</button>
-  </div>
-
-  <script src="game.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
