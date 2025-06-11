@@ -1,39 +1,65 @@
 body {
   margin: 0;
   overflow: hidden;
-  background: #87CEEB;
+  font-family: sans-serif;
+}
+
+#start-screen {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#87CEEB, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#start-screen h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+#start-btn {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#start-btn:hover {
+  background: #cc0000;
 }
 
 #game {
   position: relative;
-  width: 800px;
-  height: 450px;
-  margin: auto;
-  background: #cceeff;
-  border: 2px solid #333;
+  width: 100vw;
+  height: 100vh;
+  background-color: #87CEEB;
   overflow: hidden;
 }
 
 #player {
-  width: 40px;
-  height: 40px;
-  background: red;
+  width: 50px;
+  height: 50px;
+  background-color: red;
   position: absolute;
-  left: 100px;
-  top: 100px;
-  border-radius: 5px;
+  left: 50px;
+  top: 0;
+  border-radius: 10px;
 }
 
 .ground, .platform {
-  position: absolute;
   width: 200px;
-  height: 40px;
-  background: #654321;
+  height: 20px;
+  background-color: #654321;
+  position: absolute;
   bottom: 0;
 }
 
 .platform {
-  background: #a0522d;
-  height: 20px;
+  background-color: #8B4513;
+  height: 15px;
   bottom: auto;
 }
