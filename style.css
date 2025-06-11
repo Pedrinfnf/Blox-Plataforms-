@@ -1,0 +1,128 @@
+/* Reset e estilos básicos */
+html, body {
+  margin: 0; padding: 0; height: 100%; overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #111;
+  user-select: none;
+}
+
+#gameCanvas {
+  display: block;
+  margin: 12px auto 0;
+  background: #222;
+  border-radius: 12px;
+  border: 4px solid #111;
+  image-rendering: pixelated;
+  max-width: 100vw;
+  max-height: 70vh;
+}
+
+#hud {
+  width: 900px;
+  max-width: 100vw;
+  margin: 8px auto 0;
+  color: white;
+  font-size: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 20px;
+  border-radius: 8px;
+  user-select: none;
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+}
+
+.overlayScreen {
+  position: fixed;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(10,10,10,0.95);
+  padding: 30px 50px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 26px;
+  color: #aaf;
+  z-index: 100;
+}
+
+.overlayScreen button {
+  margin-top: 20px;
+  font-size: 22px;
+  padding: 12px 30px;
+  border-radius: 15px;
+  border: none;
+  background: #6699ff;
+  color: #111;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s ease;
+}
+
+.overlayScreen button:hover {
+  background: #99bbff;
+}
+
+/* Controles móveis */
+#controls {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 16px;
+  z-index: 50;
+}
+
+button.control-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  border: none;
+  font-size: 38px;
+  background: #444;
+  color: white;
+  opacity: 0.75;
+  user-select: none;
+  transition: opacity 0.15s ease;
+}
+
+button.control-btn:active {
+  opacity: 1;
+  background: #66aaff;
+}
+
+#jumpBtn {
+  position: fixed;
+  bottom: 12px;
+  right: 90px;
+  width: 80px;
+  height: 80px;
+  font-size: 44px;
+  border-radius: 50%;
+  background: #444;
+  opacity: 0.75;
+  z-index: 50;
+  user-select: none;
+}
+
+#jumpBtn:active {
+  opacity: 1;
+  background: #66aaff;
+}
+
+#fireBtn {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  width: 80px;
+  height: 80px;
+  font-size: 44px;
+  border-radius: 50%;
+  background: #cc4444;
+  color: white;
+  opacity: 0.75;
+  z-index: 50;
+  user-select: none;
+}
+
+#fireBtn:active {
+  opacity: 1;
+  background: #ee6666;
+}
